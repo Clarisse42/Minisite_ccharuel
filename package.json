@@ -1,0 +1,24 @@
+{
+  "name": "minisite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bootstrap": "^3.3.7",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "fs": "0.0.1-security",
+    "is-empty": "^1.2.0",
+    "jquery": "^3.2.1",
+    "node-regexp": "^0.1.1",
+    "nodemon": "^1.14.8"
+  }
+}

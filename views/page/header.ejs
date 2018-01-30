@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mini Site</title>
+	 <meta charset="utf-8">
+	 <link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	 <link rel="stylesheet" type="text/css" href="registration.css">
+	 <link rel="icon" href="favicon.ico">
+	 <style type="text/css">
+		@-moz-keyframes FADE{
+			0%{ 
+			opacity: 0;
+			}
+			100% { 
+			opacity: 1;/
+			}
+		}
+		@-webkit-keyframes FADE{
+			0%{ 
+			opacity: 0;
+			}
+			100% { 
+			opacity: 1;
+
+			}
+		}
+		body{
+			background-image: url();
+			-webkit-animation-name:FADE;
+			-webkit-animation-duration:2s;
+			-webkit-animation-iteration-count:1;
+			-moz-animation-name: FADE;
+			-moz-animation-duration: 3s;
+		}
+	</style>
+</head>
+
+<% if (login == 1 && !session) {%>
+<body style="background-image: url(fond.jpg);background-attachment:fixed;background-position:center;background-size:cover;background-repeat:no-repeat;">
+<% }  else {%>
+<body>
+<% } %>
+	
+	<nav class="navbar navbar-inverse">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      			<a class="navbar-brand" href="/">MiniSite</a>
+    		</div>
+    		<% if (login == 0) { %>
+      			<a href="/login"><button class="btn btn-blue navbar-btn">Login</button></a>
+      			<% } %>
+      			<% if (regi == 0) { %>
+      			<a href="/"><button class="btn btn-blue navbar-btn">Registration</button></a>
+      			<% } %>
+    		<% if (session) { %>
+    		<a href="/logout"><button class="btn btn-blue navbar-btn">Logout</button></a>
+    		<%	}	%>
+  		</div>
+	</nav>

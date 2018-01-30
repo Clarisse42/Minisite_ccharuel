@@ -1,0 +1,33 @@
+<% include header.ejs %>
+
+<div class="main">
+	<p class="title">Login Form</p>
+	<div class="container">
+		<div class="row">
+			<form method="post">
+				<div class="form-group col-md-12">
+				    <label class="label" for="firstname">First name</label>
+				    <input type="text" name="fname" class="form-control" id="firstname" placeholder="First name" onfocus="color(this)" onblur="uncolor(this)">
+				 </div>
+				 <div class="form-group col-md-12">
+				    <label class="label" for="mail">Mail</label>
+					<input type="mail" name="mail" class="form-control" id="mail" placeholder="Mail" onfocus="color(this)" onblur="uncolor(this)">
+				</div>
+				<button type="submit" name="send" value="OK" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+	</br>
+	<% if (badId == 1) { %>
+	<div class="alert alert-danger" role="alert">
+  		Bad ID :(
+	</div>
+	<% } %>
+	<% if (notFilled == 1) { %>
+	<div class="alert alert-danger" role="alert">
+  		All fields are not filled
+	</div>
+	<% } %>
+</div>
+
+<% include footer.ejs %>

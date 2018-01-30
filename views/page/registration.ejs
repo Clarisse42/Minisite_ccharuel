@@ -1,0 +1,65 @@
+
+<% include header.ejs %>
+
+
+	<p class="title">Registration Form</p>
+	<img src="t'esqui.jpg"/>
+	</br>
+	<form method="post">
+	<div class="container">
+		<div class="row">
+			  <div class="form-group col-md-12">
+			    <label class="label" for="name">Name</label>
+			    <input type="text" name="name" class="form-control" id="name" placeholder="Name" onfocus="color(this)" onblur="uncolor(this)">
+			  </div>
+			  <div class="form-group col-md-12">
+			    <label class="label" for="firstname">First name</label>
+			    <input type="text" name="fname" class="form-control" id="firstname" placeholder="First name" onfocus="color(this)" onblur="uncolor(this)">
+			  </div>
+			  <div class="form-group col-md-12">
+			    <label class="label" for="mail">Mail</label>
+			    <input type="mail" name="mail" class="form-control" id="mail" placeholder="Mail" onfocus="color(this)" onblur="uncolor(this)">
+			  </div>
+			  <div class="form-group col-md-12">
+			    <label class="label" for="age">Age</label>
+			    <input type="number" name="age" class="form-control" id="age" placeholder="Age" onfocus="color(this)" onblur="uncolor(this)">
+			  </div>
+		</div>
+	</div>
+	  <button type="submit" name="send" value="OK" class="btn btn-primary">Submit</button>
+	</form>
+	</br>
+	<% if (name == 1) { %>
+	<div class="alert alert-danger" role="alert">
+  		Wrong format of your name
+	</div>
+	<% } %>
+	<% if (fname == 1) { %>
+	<div class="alert alert-danger" role="alert">
+  		Wrong format of your first Name
+	</div>
+	<% } %>
+	<% if (mail == 1) { %>
+	<div class="alert alert-danger" role="alert">
+  		Wrong format of your mail
+	</div>
+	<% } %>
+	<% if (age == 1) { %>
+	<div class="alert alert-danger" role="alert">
+  		You must be between 1 and 77 years old 
+	</div>
+	<% } %>
+	<% if (mailExist == 1) { %>
+	<div class="alert alert-danger" role="alert">
+  		This email address is already used 
+	</div>
+	<% } %>
+	<% if (notFilled == 1) { %>
+	<div class="alert alert-danger" role="alert">
+  		All fields are not filled
+	</div>
+	<% } %>
+
+	<script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+
+<% include footer.ejs %>

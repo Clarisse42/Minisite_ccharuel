@@ -1,0 +1,108 @@
+
+<% include header.ejs %>
+
+<p class="title">Your Profile</p>
+
+<table class="table">
+   <tbody>
+    <tr>
+      <th class="cell" scope="col2">
+      	<div class="card" style="width: 10rem;">
+      	  <img class="card-img-top" src="mail.png" alt="Card image cap">
+      	  <div class="card-body">
+      	    <p class="card-text"><%= mail%></p>
+      	  </div>
+        </div>
+      </th>
+      <th class="cell" scope="col">
+      	<div class="card" style="width: 10rem;">
+      	  <img class="card-img-top" src="name.png" alt="Card image cap">
+      	  <div class="card-body">
+      	    <p class="card-text"><%= fname%></p>
+      	  </div>
+      	</div>
+      </th>
+    </tr>
+    <tr>
+       <th class="cell" scope="col">
+      	<div class="card" style="width: 10rem;">
+      	  <img class="card-img-top" src="name.png" alt="Card image cap">
+      	  <div class="card-body">
+      	    <p class="card-text"><%= name%></p>
+      	  </div>
+      	</div>
+      </th>
+      <th class="cell" scope="col">
+      	<div class="card" style="width: 10rem;">
+      	  <img class="card-img-top" src="age.png" alt="Card image cap">
+      	  <div class="card-body">
+      	    <p class="card-text"><%= age%> ans</p>
+      	  </div>
+      	</div>
+      </th>
+    </tr>
+  </tbody>
+</table>
+
+<button type="button" id="" class="btn btn-primary" data-toggle="modal" data-target="#changeFname">
+  Change your first name
+</button>
+</br>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#changeAge">
+  Change your first age
+</button>
+
+<div class="modal fade" id="changeFname" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Enter your new first name</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST">
+          <div class="form-group">
+            <label for="firstname" class="col-form-label">First name:</label>
+            <input type="text" name="fname" class="form-control" id="firstname" placeholder="First name" onfocus="color(this)" onblur="uncolor(this)">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        	<button type="submit" class="btn btn-primary" name="sendFname" value="OK">Save changes</button>
+    	</form>
+      </div>
+    </div>
+  </div>
+</div> 
+<div class="modal fade" id="changeAge" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Enter your new Age</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST">
+          <div class="form-group">
+            <label for="age" class="col-form-label">Age :</label>
+            <input type="text" name="age" class="form-control" id="age" placeholder="Age" onfocus="color(this)" onblur="uncolor(this)">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        	<button type="submit" class="btn btn-primary" name="sendAge" value="OK">Save changes</button>
+    	</form>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<script src="../../jquery/dist/jquery.min.js"></script>
+<script src="../../bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<% include footer.ejs %>
