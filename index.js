@@ -106,7 +106,7 @@ app.post('/', (req, res) => {
 
 //Login
 
-app.get('/login', (req, res) =>{
+app.get('/login', (req, res) => {
 
 	if (!req.session.username)
 	{
@@ -249,6 +249,6 @@ app.get('/logout', (req, res) => {
     res.redirect('/login');
 });
 
-app.listen(4242, function() {
+app.listen(process.env.PORT || 5000, function() {
 	console.log("listenning on port 4242");
 });
